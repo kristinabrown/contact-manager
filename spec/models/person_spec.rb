@@ -1,14 +1,18 @@
 require 'rails_helper'
 
 RSpec.describe Person, type: :model do
+  let(:person)do
+    Person.new(first_name: "alice", last_name: "smith")
+  end
+  
   it "is invalid witout a first name" do
-    person = Person.new(first_name: nil, last_name: "smith")
+    person.first_name = nil
     
     expect(person).not_to be_valid
   end
   
   it "is invalid without a last name" do
-    person = Person.new(first_name: "jane", last_name: nil)
+    person.last_name = nil
     
     expect(person).not_to be_valid
   end
