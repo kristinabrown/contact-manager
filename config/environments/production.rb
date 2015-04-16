@@ -1,5 +1,6 @@
 Rails.application.configure do
-  config.serve_static_assets = true
+  config.serve_static_files = true
+  #config.serve_static_assets = true old-way
   config.cache_classes = true
   config.eager_load = true
   config.consider_all_requests_local       = false
