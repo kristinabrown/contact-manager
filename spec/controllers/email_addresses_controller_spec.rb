@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe EmailAddressesController, type: :controller do
 
   let(:valid_attributes) {
-    {address: "example@email.org"}
+    {address: "example@email.org", person_id: 1}
   }
 
   let(:invalid_attributes) {

@@ -13,7 +13,7 @@ RSpec.describe PhoneNumber, type: :model do
     expect(phone_number).to_not be_valid
   end
   
-  it 'must have a reference to a number' do
+  it 'must have a reference to a person' do
     phone_number.person_id = nil
     
     expect(phone_number).to_not be_valid
