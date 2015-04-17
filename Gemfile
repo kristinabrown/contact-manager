@@ -20,5 +20,7 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails'
   gem 'sqlite3'
+  gem 'capybara'
+  gem 'launchy'
 end
 
