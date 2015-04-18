@@ -60,7 +60,7 @@ RSpec.describe PhoneNumbersController, type: :controller do
         expect(assigns(:phone_number)).to be_persisted
       end
 
-      it "redirects to the created phone_number" do
+      it "redirects to the created phone_number persons page" do
         post :create, {:phone_number => valid_attributes}, valid_session
         expect(response).to redirect_to(person_path(alice))
       end
