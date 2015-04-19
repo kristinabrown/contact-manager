@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe PhoneNumber, type: :model do
   let(:person) { Person.create(:first_name => "Jimbob", :last_name => "Billy") }
-  let(:phone_number) { PhoneNumber.new(number: "3334445555", contact_id: person.id, contact_type: "person") }
+  let(:phone_number) { PhoneNumber.new(number: "3334445555", contact_id: person.id, contact_type: "Person") }
   
   it 'is a valid number' do
     expect(phone_number).to be_valid
