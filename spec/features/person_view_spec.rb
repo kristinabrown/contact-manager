@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'the person view', type: :feature do
   
-  let(:person) { Person.create(first_name: "jane", last_name: "doe") }
+let(:person) { Person.create(first_name: "jane", last_name: "doe") }
   
   describe 'phone numbers', type: :feature do
     
@@ -20,7 +20,7 @@ describe 'the person view', type: :feature do
     end
     
     it 'has a link to add more numbers' do
-      expect(page).to have_link("Add phone number", href: new_phone_number_path(person_id: person.id))
+      expect(page).to have_link("Add phone number", href: new_phone_number_path(contact_id: person.id, contact_type: "Person"))
     end
     
     it 'adds a new phone number' do
