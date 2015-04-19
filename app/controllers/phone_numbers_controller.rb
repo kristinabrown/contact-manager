@@ -56,7 +56,7 @@ class PhoneNumbersController < ApplicationController
   def destroy
     @phone_number.destroy
     respond_to do |format|
-      format.html { redirect_to person_path(@phone_number.contact), notice: 'Phone number was successfully destroyed.' }
+      format.html { redirect_to @phone_number.contact, notice: 'Phone number was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
