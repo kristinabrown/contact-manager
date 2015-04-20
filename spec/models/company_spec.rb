@@ -23,4 +23,8 @@ RSpec.describe Company, type: :model do
   it "has an array of email addresses" do
     expect(company.email_addresses).to eq([])
   end
+  
+  it "converts to name when turned to string" do
+    expect(company.to_s).to eq("company name")
+  end
 end
